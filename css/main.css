@@ -17,6 +17,7 @@
 
 html {
      font-family: 'Open Sans', sans-serif;
+  
 }
 
 .banner {
@@ -49,12 +50,13 @@ html {
 
 .financial {
      position: relative;
-     padding-top: 5px;
+     flex-wrap: wrap;
+     padding-top: 25px;
      width: 100%;
-     min-height: 220px;
+     min-height: 200px;
      background-color: rgb(219, 222, 222);
      border-radius: 15px;
-     gap: 2px;
+     
 }
 
 .ficon {
@@ -74,8 +76,8 @@ html {
 
 .fcard {
      position: relative;
-     min-width: 200px;
-     height: 200px;
+     min-width: 170px;
+     height: 170px;
      margin-bottom: 15px;
      background-color: rgb(255, 255, 255);
      border-radius: 20px;
@@ -87,9 +89,9 @@ html {
 }
 
 .fcard:hover {
-     box-shadow: 10px 10px 19px 0px rgba(24, 131, 230, 0.75);
-     -webkit-box-shadow: 10px 10px 19px 0px rgba(24, 131, 230, 0.75);
-     -moz-box-shadow: 10px 10px 19px 0px rgba(24, 131, 230, 0.75);
+     box-shadow: 10px 10px 12px 1px rgba(47,53,189,0.75);
+     -webkit-box-shadow: 10px 10px 12px 1px rgba(47,53,189,0.75);
+     -moz-box-shadow: 10px 10px 12px 1px rgba(47,53,189,0.75);
 }
 
 .card_title {
@@ -98,7 +100,7 @@ html {
      top: 0;
      left: 0;
      transform: translate(5px, 5px);
-     font-size: 1.2rem;
+     font-size: 1.1rem;
      font-family: 'Open Sans', sans-serif;
      font-weight: 900;
      color: #0f055377;
@@ -109,17 +111,17 @@ html {
      width: 50%;
      top: 40%;
      left: 10px;
-     font-size: 2.2rem;
+     font-size: 1.6rem;
      font-weight: 700;
      color: var(--col_blue);
 }
 
 .progress_bar {
      position: absolute;
-     top: 20px;
+     top: 30px;
      right: 50px;
-     width: 40px;
-     height: 150px;
+     width: 30px;
+     height: 100px;
      background-color: rgb(255, 255, 255);
      border: #a9a9a9 solid 1px;
      border-radius: 20px;
@@ -131,9 +133,10 @@ html {
      position: absolute;
      bottom: 0;
      right: 0;
-     width: 40px;
+     width: 28.5px;
      font-weight: bold;
-     font-size: 1.2rem;
+     font-size: 1.1rem;
+     letter-spacing: 2px;;
      background-color: var(--col_prog_red);
      border-bottom-right-radius: 20px;
      border-bottom-left-radius: 20px;
@@ -160,7 +163,21 @@ html {
 }
 
 /* project cards*/
-
+.card_upper{
+     position: absolute;
+     height: 25%;
+     width:100%;
+     top:0;
+     background-color:var(--col_blue) ;  
+     border-radius: 20px 20px 0 0;
+    text-align: center;
+    padding-top: 10px;;
+}
+.card_upper p{
+     color: aliceblue;
+     font-size: large;
+     font-weight:bold;
+}
 
 @media screen and (max-width: 900px) {
 
@@ -211,27 +228,39 @@ html {
 @media print {
      @page {
           size: landscape;
-
+          margin: 5px;
           box-shadow: 0;
+     
+     }
+     .container{
+          margin:0;
+     }
+     .banner{
+         margin-left: 50px;
+     }
+     .logo img {
+          width: 130px;
      }
 
-     .financial {
+ .fcard{
+     box-shadow: 10px 10px 25px -6px rgba(0,0,0,0.75);
+     -webkit-box-shadow: 10px 10px 25px -6px rgba(0,0,0,0.75);
+     -moz-box-shadow: 10px 10px 25px -6px rgba(0,0,0,0.75);
+ }
 
-          min-height: 170px;
-          border-radius: 10px;
-          gap: 2px;
+     .card_title {
+       
+          color: #0f0553;
      }
-
-     .fcard {
-          width: 150px;
-          height: 150px;
-
-
+     
+     .btn-link{
+          visibility: hidden;
      }
 
      .ficon {
-          opacity: 0;
+          visibility: collapse;
      }
+  
 
 
 
